@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<string.h>
+int main(void)
+{
+	char a[1000];
+	char b[10];
+	printf("请输入任意字符:\n");
+	gets(a);
+	printf("请输入需要查找的单词:\n");
+	gets(b);
+	strlen(a);
+	strlen(b);
+	int x=strlen(b);
+	int y=strlen(a);
+	char c[x-1];
+	int z=0;
+	for(int i=0;i<=y-x;i++)
+	{
+		for(int j=0;j<x;j++)
+		{
+			c[j]=a[j+i];
+		}
+		if(strcmp(b,c)==0)
+		z++;
+	}
+	printf("出现该单词的次数为:%d\n",z);
+	return 0;
+}
